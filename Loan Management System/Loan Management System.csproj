@@ -50,7 +50,11 @@
   <PropertyGroup>
     <ApplicationIcon>ICO_LMS_LOGO.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Loan_Management_System.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.14.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,16 +68,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmSplashScreen.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSplashScreen.Designer.cs">
-      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSplashScreen.Designer.cs">
+      <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Borrowers\FormBorrowers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Borrowers\FormBorrowers.Designer.cs">
+      <DependentUpon>FormBorrowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Loans\FormLoans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Loans\FormLoans.Designer.cs">
+      <DependentUpon>FormLoans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\UserAccountFunction.cs" />
+    <Compile Include="Models\SessionData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmSplashScreen.resx">
-      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    <Compile Include="Void\Database.cs" />
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSplashScreen.resx">
+      <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,6 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ICO_LMS_LOGO.ico" />
+    <None Include="Resources\login_user.png" />
+    <None Include="Resources\login_pass.png" />
+    <None Include="Resources\icon_header.png" />
+    <None Include="Resources\frmLogin.png" />
+    <None Include="Resources\btnLogin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
