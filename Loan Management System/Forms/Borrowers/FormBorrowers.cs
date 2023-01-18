@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Loan_Management_System
+namespace Loan_Management_System.Forms.Borrowers
 {
-    public partial class FrmSplashScreen : Form
+    public partial class FormBorrowers : Form
     {
-        public FrmSplashScreen()
+        public FormBorrowers()
         {
             InitializeComponent();
         }
